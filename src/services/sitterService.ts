@@ -9,8 +9,9 @@ import type {
 	SitterProfileDTO,
 	SitterProfileSummary,
 	SitterRegisterRequest,
-} from '../types/sitter';
-import type { ExtendedSitter } from '@/types/sitter';
+    ExtendedSitter,
+    ServiceOffering
+} from '../features/sitters/types';
 import type { Service } from '@/pages/SitterDashboard';
 
 const API_URL = '/api/sitter-profiles';

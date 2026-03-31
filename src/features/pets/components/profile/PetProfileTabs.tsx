@@ -46,13 +46,13 @@ export function PetProfileTabs({ pet }: { pet: Pet }) {
                 <nav className="flex space-x-8 -mb-px">
                     {TABS_CONFIG.map((tab) => {
                         const Icon = tab.icon;
-                        const isActive = activeTab === tab.id;
+                        const active = activeTab === tab.id;
                         return (
                             <button
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
                                 className={`flex items-center gap-2 py-3 px-1 border-b-2 font-medium text-sm transition-colors duration-200 ${
-                                    isActive
+                                    active
                                         ? 'border-orange-500 text-orange-600'
                                         : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                                 }`}

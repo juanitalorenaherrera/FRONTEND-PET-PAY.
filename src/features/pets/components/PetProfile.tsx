@@ -49,4 +49,4 @@ export function PetProfile() {
             <PetProfileTabs pet={selectedPet} />
         </div>
     );
-}
+}

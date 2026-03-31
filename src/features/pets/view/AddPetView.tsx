@@ -123,9 +123,9 @@ export const AddPetView = () => {
 
 		await toast.promise(addPet(petDataWithAccount), {
 			loading: 'Guardando los datos de tu nuevo amigo...',
-			success: (newPet) => {
+			success: () => {
 				navigate('/dashboard/pets');
-				return `¡Se añadió a ${newPet.name} a tu familia!`;
+				return `¡Se añadió a ${data.name} a tu familia!`;
 			},
 			error: (err) => `No se pudo registrar la mascota: ${err.message}`,
 		});

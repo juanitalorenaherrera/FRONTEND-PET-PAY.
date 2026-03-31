@@ -8,7 +8,7 @@ import { BookingStatus } from '@/features/booking/types';
 import type { CaretakerDashboardData } from '@/features/caregiver/types/index';
 import type { DashboardStatsData } from '@/types/DashboardStatsData';
 import type { PetSummaryResponse } from '@/types/pets';
-import { Role } from '@/types/authStore';
+import { Role } from '@/features/auth/types/authStore';
 import axios from '@/services/auth';
 import { getMockDashboardData } from './mockDashboardService';
 import { getServicesBySitterForDashboard } from './sitterService';

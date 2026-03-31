@@ -202,19 +202,19 @@ export function PetsFilters({ className = '' }: PetsFiltersProps) {
                                     </label>
                                     <div className="flex flex-wrap gap-3">
                                         {availableSpecies.map((option) => {
-                                            const isActive = filters.species?.includes(option.value);
+                                            const active = filters.species?.includes(option.value);
                                             return (
                                                 <button
                                                     key={option.value}
                                                     onClick={() => handleSpeciesToggle(option.value)}
                                                     className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 border-2 ${
-                                                        isActive
+                                                        active
                                                             ? 'bg-purple-100 border-purple-200 text-purple-700 dark:bg-purple-900/30 dark:border-purple-800 dark:text-purple-300 shadow-sm'
                                                             : 'bg-white border-transparent text-gray-600 hover:border-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:hover:border-gray-700 shadow-sm shadow-gray-100 dark:shadow-none'
                                                     }`}
                                                 >
                                                     {option.label}
-                                                    {isActive && <div className="w-2 h-2 rounded-full bg-purple-500 shadow-sm shadow-purple-500/50" />}
+                                                    {active && <div className="w-2 h-2 rounded-full bg-purple-500 shadow-sm shadow-purple-500/50" />}
                                                 </button>
                                             );
                                         })}

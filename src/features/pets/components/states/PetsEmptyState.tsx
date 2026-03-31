@@ -26,4 +26,4 @@ export function PetsEmptyState() {
             </button>
         </div>
     );
-}
+}

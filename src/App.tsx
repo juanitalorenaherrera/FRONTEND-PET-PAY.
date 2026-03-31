@@ -14,7 +14,7 @@ import { FavoritesView } from './features/favorites/FavoritesView';
 import  LandingPage  from '@/pages/LadingPage';
 import { NotificationsView } from './features/notification/NotificationsView';
 import { ProfileView } from './features/profile/view/ProfileView';
-import { Role } from './types/authStore';
+import { Role } from '@/features/auth/types/authStore';
 import RoleProtectedRoute from './components/auth/RoleProtectedRoute';
 import { SettingsView } from './features/settings/SettingsView';
 import  SitterDashboard  from '../src/pages/SitterDashboard';
@@ -27,11 +27,11 @@ const AdminDashboard = lazy(() => import('./pages/AdminDashboard'));
 const OwnerBooking = lazy(() => import('./pages/OwnerBooking'));
 const DashboardLayout = lazy(() => import('./layouts/DashboardLayout').then(module => ({ default: module.DashboardLayout })));
 const MainDashboardView = lazy(() => import('./features/dashboard/MainDashboardView'));
-const PetsView = lazy(() => import('./features/pets/view/PetsView').then(module => ({ default: module.PetsView })));
+const PetsView = lazy(() => import('./features/pets/view/PetsView').then(module => ({ default: module.PetsViewContent })));
 const PetsOverview = lazy(() => import('./features/pets/components/PetsOverview').then(module => ({ default: module.PetsOverview })));
 const PetProfile = lazy(() => import('./features/pets/components/PetProfile').then(module => ({ default: module.PetProfile })));
-const FindSittersView = lazy(() => import('./features/sitters/components/FindSittersView').then(module => ({ default: module.FindSittersView })));
-const BookingsView = lazy(() => import('./features/booking/views/BookingView').then(module => ({ default: module.BookingsView })));
+const FindSittersView = lazy(() => import('./features/sitters/components/FindSittersView').then(module => ({ default: module.SittersViewContent })));
+const BookingsViewContent = lazy(() => import('./features/booking/views/BookingView').then(module => ({ default: module.BookingsViewContent })));
 export default function App() {
 	return (
 		<BrowserRouter>
@@ -65,7 +65,7 @@ export default function App() {
 							path="find-sitters"
 							element={<FindSittersView />}
 						/>
-						<Route path="bookings" element={<BookingsView />} />
+						<Route path="bookings" element={<BookingsViewContent />} />
 						<Route path="billing" element={<BillingView />} />
 						<Route path="new-booking" element={<CreateBookingView />} />
 						<Route path="care" element={<CareView />} />

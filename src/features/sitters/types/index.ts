@@ -171,3 +171,16 @@ export type SittersAction =
   | { type: 'SET_ERROR'; payload: string }
   | { type: 'SET_FILTERS'; payload: Partial<SitterFilters> }
   | { type: 'CLEAR_FILTERS' };
+
+/** Representa un servicio ofrecido por un cuidador. */
+export interface ServiceOffering {
+    id: number;
+    sitterId: number;
+    serviceType: string;
+    name: string;
+    description: string;
+    price: number;
+    durationInMinutes: number;
+    active?: boolean;
+    createdAt?: string;
+}

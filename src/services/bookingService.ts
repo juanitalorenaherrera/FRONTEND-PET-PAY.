@@ -6,7 +6,7 @@ import type {
 	PageResponse,
 	UpdateBookingRequest,
 } from '@/features/booking/types';
-import type { Role } from '@/types/authStore';
+import type { Role } from '@/features/auth/types/authStore';
 import axios from './auth';
 
 const API_URL = '/api/bookings';

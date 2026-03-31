@@ -4,7 +4,7 @@ import type {
 	LoginResponse,
 	Profile,
 	RegisterResponse,
-} from '@/types/authStore';
+} from '@/features/auth/types/authStore';
 
 /**
  * Inicia sesión, guarda el token y devuelve los datos del usuario.

@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useAuthStore } from '@/store/AuthStore';
 import { registerRequest } from '@/services/authService';
 import { useNavigate } from 'react-router';
-import { Role } from '@/types/authStore';
+import { Role } from '@/features/auth/types/authStore';
 import { useState } from 'react';
 import { registerSchema, type RegisterFormData } from '../schemas/registerSchema';
 

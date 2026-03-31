@@ -16,7 +16,7 @@ export interface Service {
 	description: string;
 	price: number;
 	durationInMinutes: number;
-	isActive: boolean;
+	active: boolean;
 	createdAt: string;
 }
 //'2025-09-09T03:42:27.793+00:00'

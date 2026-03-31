@@ -9,7 +9,7 @@ import { CreateBookingStep1 } from '../components/CreateBookingStep1';
 import { CreateBookingStep2 } from '../components/CreateBookingStep2';
 import { BookingSummaryCard } from '../components/BookingSummaryCard';
 import { Button } from '@/components/ui/Button';
-import { getServicesBySitter } from '@/services/sitterService';
+import { getMyServices as getServicesBySitter } from '@/services/sitterService';
 import type { ServiceOffering } from '../types/bookingTypes';
 
 export const CreateBookingView = () => {

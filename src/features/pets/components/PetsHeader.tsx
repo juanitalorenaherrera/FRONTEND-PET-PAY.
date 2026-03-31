@@ -18,7 +18,7 @@ export function PetsHeader() {
     const { refreshPets } = usePetsActions();
     const navigate = useNavigate();
 
-    const totalActivePets = useMemo(() => pets.filter(p => p.isActive).length, [pets]);
+    const totalActivePets = useMemo(() => pets.filter(p => p.active).length, [pets]);
     
     const pluralSuffix = totalActivePets !== 1 ? 's' : '';
 

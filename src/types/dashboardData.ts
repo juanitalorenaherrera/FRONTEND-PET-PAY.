@@ -32,8 +32,8 @@ export interface Pet {
 	species: string;
 	breed: string;
 	age: number;
+	active: boolean;
 	createdAt: string;
-	isActive: boolean;
 }
 
 export interface Sitter {

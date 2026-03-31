@@ -36,7 +36,7 @@ const PetCard: React.FC<PetCardProps> = ({ pet, onClick, className = '' }) => {
 				/>
 
 				{/* Indicador de estado activo */}
-				{pet.isActive && (
+				{pet.active && (
 					<div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
 						<div className="w-2 h-2 bg-white rounded-full"></div>
 					</div>

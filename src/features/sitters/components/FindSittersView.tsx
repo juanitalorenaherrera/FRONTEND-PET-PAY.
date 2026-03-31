@@ -6,7 +6,7 @@ import {
 	SittersLoadingState,
 	SittersErrorState,
 } from '../components';
-import type { ExtendedSitter } from '@/types/sitter';
+import type { ExtendedSitter } from '../types';
 import { useSittersStore } from '@/store/SitterStore';
 
 /**

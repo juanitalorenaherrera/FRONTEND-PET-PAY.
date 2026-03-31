@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { useAuthStore } from '@/store/AuthStore';
-import { Role } from '@/types/authStore';
+import { Role } from '@/features/auth/types/authStore';
 
 // Tipos para los datos del dashboard
 interface DashboardStats {

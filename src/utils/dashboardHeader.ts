@@ -1,4 +1,4 @@
-import { Role } from "@/types/authStore";
+import { Role } from "@/features/auth/types/authStore";
 
 export const displayName = (role?: Role): string | undefined => {
 	if (role)

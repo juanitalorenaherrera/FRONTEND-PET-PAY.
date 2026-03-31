@@ -5,11 +5,11 @@ import { useEffect } from 'react';
 import { BookingsOverview } from '@/features/booking/components/BookingOverview';
 //import { LoadingSpinner } from '../../../components/ui/LoadingSpinner';
 import { useAuthStore } from '@/store/AuthStore';
-import { useBookingsStore } from '@/store/BookingStore';
+import { useBookingStore } from '@/store/BookingStore';
 
 export function BookingsViewContent() {
-	const loadBookings = useBookingsStore((state) => state.loadBookings);
-	const isLoading = useBookingsStore((state) => state.isLoading);
+	const loadBookings = useBookingStore((state: any) => state.loadBookings);
+	const isLoading = useBookingStore((state: any) => state.isLoading);
 	const user = useAuthStore((state) => state.profile);
 
     // LÓGICA DE CARGA CENTRALIZADA: Este es el lugar correcto para el useEffect.

@@ -3,7 +3,7 @@
 import { Bell, Plus } from 'lucide-react';
 
 import { Button } from '@/components/ui/Button';
-import type { Profile } from '@/types/authStore'; // Asegúrate que esta es la ruta a tu interfaz User
+import type { Profile } from '@/features/auth/types/authStore'; // Asegúrate que esta es la ruta a tu interfaz User
 import { motion } from 'framer-motion';
 
 interface CaretakerHeaderProps {

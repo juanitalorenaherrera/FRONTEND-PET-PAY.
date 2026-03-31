@@ -66,10 +66,16 @@ export const useCreateBooking = () => {
 	const onSubmit: SubmitHandler<BookingFormData> = async (data) => {
 		setIsSubmitting(true);
 		try {
-			await createBooking(data);
+			await createBooking(
+				data.petId!,
+				data.sitterId!,
+				data.serviceId!,
+				data.startDate!.toISOString(),
+				data.additionalNotes
+			);
 			toast.success('¡Reserva creada con éxito! 🐾');
 			navigate('/dashboard/bookings');
-		} catch (error) {
+		} catch {
 			toast.error('Hubo un error al crear la reserva.');
 		} finally {
 			setIsSubmitting(false);

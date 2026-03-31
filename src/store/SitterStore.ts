@@ -3,7 +3,7 @@ import type {
 	SitterStats,
 	SitterFilters,
 } from '@/features/sitters/types';
-import type { ExtendedSitter } from '@/types/sitter';
+import type { ExtendedSitter } from '@/features/sitters/types';
 import {
 	getActiveSitters,
 	getSitterStats,

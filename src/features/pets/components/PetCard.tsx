@@ -69,7 +69,7 @@ const PetInfo: React.FC<{ pet: Pet; variant: 'compact' | 'default' | 'detailed' 
         <>
             <div className="flex items-center gap-2 mb-1">
                 <h4 className="font-bold text-gray-900 dark:text-white truncate text-sm" title={pet.name}>{pet.name}</h4>
-                {!pet.isActive && <span className="text-xs bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-2 py-0.5 rounded-full">Inactivo</span>}
+                {!pet.active && <span className="text-xs bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-2 py-0.5 rounded-full">Inactivo</span>}
             </div>
             <div className="flex items-center gap-2 mb-1">
                 <span className="text-xs text-orange-600 dark:text-orange-400 font-medium bg-orange-100 dark:bg-orange-500/20 px-2 py-0.5 rounded-full">{pet.species || 'Sin especificar'}</span>

@@ -127,7 +127,7 @@ export function calculateUserStats(pets: Pet[]): PetStats {
         };
     }
 
-    const activePets = pets.filter(p => p.isActive).length;
+    const activePets = pets.filter(p => p.active).length;
     const petsBySpecies = pets.reduce((acc, pet) => {
         const species = pet.species || 'Desconocido';
         acc[species] = (acc[species] || 0) + 1;

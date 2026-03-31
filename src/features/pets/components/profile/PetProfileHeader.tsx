@@ -257,8 +257,8 @@ export function PetProfileHeader({ pet, onPetUpdated }: { pet: Pet; onPetUpdated
                     <div className="min-w-0">
                         <div className="flex items-center gap-2 flex-wrap">
                             <h1 className="text-xl sm:text-2xl font-black text-gray-900 dark:text-white">{pet.name}</h1>
-                            <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full ${pet.isActive ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400' : 'bg-gray-100 text-gray-500'}`}>
-                                {pet.isActive ? '● Activo' : '● Inactivo'}
+                            <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full ${pet.active ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400' : 'bg-gray-100 text-gray-500'}`}>
+                                {pet.active ? '● Activo' : '● Inactivo'}
                             </span>
                         </div>
                         <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">

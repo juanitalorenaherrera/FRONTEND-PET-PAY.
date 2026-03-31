@@ -1,4 +1,4 @@
-import type { SitterProfileDTO } from "../types/sitter";
+import type { SitterProfileDTO } from "@/features/sitters/types";
 import type { Service } from "../pages/SitterDashboard";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
@@ -8,7 +8,7 @@ import { createBooking } from "../services/bookingService";
 import { getSitterProfile, getMyServices } from "../services/sitterService";
 import { useAuthStore } from "@/store/AuthStore";
 import axios from "../services/auth";
-import type { Profile } from "../types/authStore";
+import type { Profile } from "@/features/auth/types/authStore";
 
 
 export default function BookingPage() {

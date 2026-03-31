@@ -1,9 +1,10 @@
 // features/booking/types/index.ts
 
-import type { ExtendedSitter } from '@/features/sitters/types';
-import type { NewService } from '@/types/sitter';
-import type { PetResponse } from '@/types/pets'; // Asumiendo que Pet es PetResponse
+import type { ExtendedSitter, ServiceOffering } from '@/features/sitters/types';
+import type { PetResponse } from '@/types/pets'; 
 import { z } from 'zod';
+
+export type { ExtendedSitter, ServiceOffering };
 
 /**
  * Representa los posibles estados de una reserva, alineado con el enum del backend.
@@ -155,18 +156,9 @@ export interface BookingStats {
  * Representa los datos necesarios para popular los selectores del formulario.
  */
 export interface BookingCreationData {
-	sitters: ExtendedSitter[]; // Reutilizamos el tipo de la feature 'sitters'
-	pets: PetResponse[]; // Reutilizamos el tipo de la feature 'pets'
-	services: NewService[]; // Necesitarás crear este tipo si no existe
-	//platformFee: number;
-}
-
-// Asegúrate de tener este tipo, si no existe créalo en un archivo de tipos relevante
-export interface ServiceOffering {
-	id: number;
-	serviceType: string;
-	price: number;
-	description: string;
+	sitters: ExtendedSitter[]; 
+	pets: PetResponse[]; 
+	services: ServiceOffering[]; 
 }
 
 export const bookingSchema = z
@@ -213,15 +205,3 @@ export const bookingSchema = z
 	);
 
 export type BookingFormData = z.infer<typeof bookingSchema>;
-
-export interface BookingCreationData {
-	sitters: ExtendedSitter[];
-	pets: PetResponse[];
-}
-
-export interface ServiceOffering {
-	id: number;
-	serviceType: string;
-	price: number;
-	description: string;
-}

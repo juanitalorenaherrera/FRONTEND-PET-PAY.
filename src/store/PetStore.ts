@@ -84,7 +84,7 @@ export const usePetsStore = create<PetsState & PetActions>((set, get) => ({
 				!filters.species ||
 				filters.species.length === 0 ||
 				filters.species.includes(p.species);
-			const activeMatch = !filters.activeOnly || p.isActive;
+			const activeMatch = !filters.activeOnly || p.active;
 			return searchMatch && speciesMatch && activeMatch;
 		});
 		set({ filteredPets: newFilteredPets });

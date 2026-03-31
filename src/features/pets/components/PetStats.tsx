@@ -22,7 +22,7 @@ export function PetStats() {
             };
         }
 
-        const activePetsCount = pets.filter(pet => pet.isActive).length;
+        const activePetsCount = pets.filter(pet => pet.active).length;
         
         return {
             totalPets: pets.length,

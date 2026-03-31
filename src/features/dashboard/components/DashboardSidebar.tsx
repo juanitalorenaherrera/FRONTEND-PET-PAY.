@@ -44,7 +44,7 @@ export function ClientSidebar({ activeItem, onClose }: ClientSidebarProps) {
 				<div className="space-y-1">
 					{NAV_ITEMS.map((item) => {
 						const Icon = item.icon;
-						const isActive = activeItem === item.id;
+						const active = activeItem === item.id;
 
 						return (
 							// 2. Reemplazamos <button> por <Link> para la navegación.
@@ -52,7 +52,7 @@ export function ClientSidebar({ activeItem, onClose }: ClientSidebarProps) {
 								key={item.id}
 								to={item.path}
 								className={`w-full flex items-center justify-between px-4 py-3 rounded-lg transition-colors group ${
-									isActive
+									active
 										? 'bg-orange-50 dark:bg-orange-500/20 text-orange-700 dark:text-orange-400 font-bold'
 										: 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white'
 								}`}
@@ -60,7 +60,7 @@ export function ClientSidebar({ activeItem, onClose }: ClientSidebarProps) {
 								<div className="flex items-center gap-3">
 									<Icon
 										className={`w-5 h-5 ${
-											isActive
+											active
 												? 'text-orange-600'
 												: 'text-gray-400 group-hover:text-gray-600'
 										}`}
